@@ -1,0 +1,128 @@
+.skillStatistics {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    color: #F2F4FF;
+
+    & .backLink {
+        color: #F2F4FF;
+        text-decoration: none;
+
+        & + .backLink {
+            text-decoration: underline;
+        }
+    }
+
+    & .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        background: #132742;
+        backdrop-filter: blur(11.770999908447266px);
+        box-shadow: 0px 4px 20px 0px #000;
+        padding: 18px 16px;
+
+        & .salary > div {
+            color: #F2F4FF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            & + div {
+                font-weight: 400;
+            }
+        }
+    }
+
+    & .match {
+        position: relative;
+
+        & svg {
+            filter: drop-shadow(2px 0px 4px #3757AA);
+        }
+
+        &Value {
+            width: 100%;
+            height: 100%;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            & .percent {
+                font-size: 24px;
+            }
+        }
+    }
+
+    & .skillsContainer {
+        border-radius: 20px;
+        background: #132742;
+        backdrop-filter: blur(11.770999908447266px);
+        box-shadow: 0px 4px 20px 0px #000;
+        padding: 18px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        & .title {
+            color: #F2F4FF;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        & .skillItemName {
+            color: #F2F4FF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        & .skillItemValue {
+            color: #537EE7;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        & .skillItemLine {
+            width: 100%;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+    
+            &Fill {
+                height: 50%;
+                background: linear-gradient(180deg, #537EE7 0%, #2659D4 100%);;
+                border-radius: 11px;
+                box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25) inset;
+            }
+    
+            &Remaining {
+                height: 50%;
+                background: linear-gradient(180deg, #0E131C 0%, rgba(13, 13, 13, 0.00) 100%);
+                box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25) inset;
+                border-top-right-radius: 11px;
+                border-bottom-right-radius: 11px;
+    
+                &.empty {
+                    border-top-left-radius: 11px;
+                    border-bottom-left-radius: 11px;
+                }
+            } 
+        }      
+    }
+
+}
